@@ -53,8 +53,9 @@ console.log(myCounter());
 const counterFactory = () => {
   // Return an object that has two methods called `increment` and `decrement`.
   let counter = 0;
-  console.log(counter);
-  let increment = () => counter += 1;
+  let increment = function(){
+    return counter += 1
+  };
   let decrement = () => counter -= 1;
   let Obj = {increment , decrement};
   // `increment` should increment a counter variable in closure scope and return it.
